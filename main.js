@@ -74,6 +74,11 @@ function saveTask() {
   const taskname = document.getElementById('task-input').value;
   const description = document.getElementById('desc-input').value;
 
+  if (taskname.trim() === '') {
+    alert('Please, enter a task name');
+    return;
+  }
+  
   newTask.taskname = taskname;
   newTask.description = description;
   newTask.priorityCount = priorityCount;
