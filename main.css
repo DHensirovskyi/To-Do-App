@@ -1,0 +1,223 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", serif;
+    box-sizing: border-box;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+
+    margin-top: 120px;
+    width: 625px;
+    box-sizing: border-box;
+}
+
+
+#topic-input {
+    overflow-wrap: break-word;
+    width: 620px;
+    border: 1px solid #1e1e1e;
+    background-color: #1e1e1e;
+    color: hsl(0, 0%, 93%);
+    box-sizing: border-box;
+    display: none; /* Скрываем поле ввода изначально */
+    font-size: 50px;
+    outline: none;
+    padding: 3px 0px;
+    line-height: 0;
+    font-family: "Montserrat", serif;
+    font-weight: bold;
+}
+
+#new-page-text {
+    color: rgba(255, 255, 255, 1); /* Полупрозрачный текст */
+    cursor: pointer; /* Курсор-указатель при наведении */
+    font-size: 50px;
+    line-height: 0;
+    font-family: "Montserrat", serif;
+    margin-bottom: 60px;
+}
+
+#task-input {
+    overflow-wrap: break-word;
+    width: 590px;
+    border: 0px solid #ffffff;
+    background-color: #1e1e1e;
+    box-sizing: border-box;
+    display: none; /* Скрываем поле ввода изначально */
+    outline: none;
+    line-height: 0;
+    font-family: "Montserrat", serif;
+    font-weight: bold;
+    font-size: 16px;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    padding: 0px;
+    height: 15px;
+}
+
+#desc-input {
+    overflow-wrap: break-word;
+    width: 590px;
+    border: 0px solid #ffffff;
+    background-color: #1e1e1e;
+    box-sizing: border-box;
+    display: none; /* Скрываем поле ввода изначально */
+    outline: none;
+    font-family: "Montserrat", serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    margin-top: 10px;
+    height: 20px;
+}
+
+.main{
+    height: 110px;
+    margin: 20px 15px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: right;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 0.8px solid hsl(0, 0%, 40%);
+}
+
+.todoApp{
+    border: 0.8px solid hsl(0, 0%, 70%);
+    border-radius: 10px;
+    margin-top: 30px;
+    min-height: 196px;
+}
+
+.priority{
+    border: 0.8px solid hsl(0, 0%, 40%);
+    border-radius: 5px;
+    height: 35px;
+    width: 100px;
+    padding-left: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 18px;
+}
+
+.priority:hover{
+    background-color: #5c5c5c29;
+}
+
+.priorityColor{
+    width: 220px;
+    height: 35px;
+    border: 0.8px solid hsl(0, 0%, 40%);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.priority img{
+    width: 18px;
+    height: 20px;
+    margin: 7px;
+} 
+
+.cancel{
+    margin-right: 10px;
+    width: 75px;
+    height: 35px;
+    background-color: #292929;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addTask{
+    width: 95px;
+    height: 35px;
+    background-color: #E24B4E;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addTask:hover{
+    background-color: #e24b4edb;
+}
+
+.cancel:hover{
+    background-color: #292929b2;
+}
+
+.cancel p, .addTask p{
+    line-height: 4px;
+    margin-left: 10px;
+}
+
+.redCircle{
+    width: 13px;
+    height: 13px;
+    background-color: #FF0000;
+    border-radius: 100px;
+    margin-top: 10px;
+    margin-right: 4px;
+    margin-left: 13px;
+}
+
+.orangeCircle{
+    width: 13px;
+    height: 13px;
+    background-color: #ffbb00;
+    border-radius: 100px;margin-top: 10px;
+    margin-right: 4px;
+    margin-left: 13px;
+}
+
+.priorityColor{
+    display: none;
+}
+
+#priorityColor.show {
+    display:flex;
+}
+
+.tasks {
+    display: flex; /* контейнер становится flexbox-ом */
+    flex-direction: column; /* элементы располагаются вертикально */
+    gap: 10px; /* расстояние между элементами */
+}
+
+.task {
+    display: flex; /* каждый элемент задачи тоже flexbox */
+    align-items: center; /* элементы внутри задачи выравниваются по вертикали */
+    gap: 10px; /* расстояние между элементами внутри задачи */
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.task-name {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.task-description {
+    font-size: 16px;
+    color: #777;
+}
+
+.priority-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.delete-button {
+    margin-left: auto; /* Кнопка удаления прижимается вправо */
+    color: white;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}

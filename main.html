@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>To-Do App</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="icon" type="image/x-icon" href="/ico.ico">
+</head>
+<body>
+    <div class="container">
+        <h1 id="new-page-text">New page</h1>
+        <input type="text" id="topic-input">
+        
+        <div class="tasks" id="tasks"></div>
+
+        <form id="myForm">
+        <div class="todoApp">
+            <div class="main">
+                <span id="task-text"><p style="font-size: 16px; font-weight: 700; color: hsl(0, 0%, 50%); line-height: 5px; margin-top: 25px;">Task name</p></span>
+                <input type="text" id="task-input">
+                <span id="desc-text"><p style="font-size: 14px; font-weight: 500; color: hsl(0, 0%, 50%);">Description</p></span>
+                <input type="text" id="desc-input">
+                <div class="priorityDiv" style="display: flex; margin-top: 20px;">
+                    <div class="priority" style="display: flex;" id="priority">
+                        <img src="flag.png" alt="flag">
+                        <p style="line-height: 2px;">Priority</p>
+                    </div>
+                    <div class="priorityColor" id="priorityColor">
+                        <div id="important" class="important" style="border-right: 0.8px solid hsl(0, 0%, 40%); width: 50%; display: flex;" id="important">
+                            <div class="redCircle"></div>
+                            <p style="line-height: 11px; font-size: 12px;">Important</p>
+                        </div>
+                        <div id='secondary' class="secondary" style="display: flex;" id="secondary">
+                            <div class="orangeCircle"></div>
+                            <p style="line-height: 11px; font-size: 12px;">Secondary</p>
+                        </div>
+                    </div>
+                </div>
+            </span>
+            <div class="buttons">
+                <div class="cancel" id="cancelBtn"><p>Cancel</p></div>
+                <div class="addTask" id="addBtn" onclick="saveTask()"><p>Add Task</p></div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script src="main.js"></script>
+</body>
+</html>
